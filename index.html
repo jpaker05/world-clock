@@ -9,7 +9,11 @@
     , initial-scale=1.0"
     />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <title>World Clock</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -20,19 +24,19 @@
         <option value="">New York</option>
         <option value="">Tokyo</option>
       </select>
-      <div class="city">
+      <div class="city" id="los-angeles">
         <div>
           <h2>Los Angeles</h2>
-          <div class="date">October 27th 2022</div>
+          <div class="date"></div>
         </div>
-        <div class="time">01:00:12 <small>PM</small></div>
+        <div class="time"><small></small></div>
       </div>
-      <div class="city">
+      <div class="city" id="cairo">
         <div>
           <h2>Cairo</h2>
-          <div class="date">October 27th 2022</div>
+          <div class="date"></div>
         </div>
-        <div class="time">01:00:12 <small>PM</small></div>
+        <div class="time"><small></small></div>
       </div>
     </div>
 
