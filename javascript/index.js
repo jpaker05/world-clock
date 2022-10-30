@@ -1,27 +1,39 @@
 function updateTime() {
-  let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
+  let londonElement = document.querySelector("#london");
+  if (londonElement) {
+    let londonDateElement = londonElement.querySelector(".date");
+    let londonTimeElement = londonElement.querySelector(".time");
+    let londonTime = moment().tz("Europe/London");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do, YYYY");
-    losAngelesTimeElement.innerHTML = `${losAngelesTime.format(
-      "hh:mm:ss:SSS"
-    )}<small>${losAngelesTime.format("A")}</small>`;
+    londonDateElement.innerHTML = londonTime.format("MMMM Do, YYYY");
+    londonTimeElement.innerHTML = `${londonTime.format(
+      "hh:mm:ss"
+    )}<small>${londonTime.format("A")}</small>`;
   }
-}
 
-let cairoElement = document.querySelector("#cairo");
-if (cairoElement) {
-  let cairoDateElement = cairoElement.querySelector(".date");
-  let cairoTimeElement = cairoElement.querySelector(".time");
-  let cairoTime = moment().tz("Africa/Cairo");
+  let cairoElement = document.querySelector("#cairo");
+  if (cairoElement) {
+    let cairoDateElement = cairoElement.querySelector(".date");
+    let cairoTimeElement = cairoElement.querySelector(".time");
+    let cairoTime = moment().tz("Africa/Cairo");
 
-  cairoDateElement.innerHTML = cairoTime.format("MMMM Do, YYYY");
-  cairoTimeElement.innerHTML = `${cairoTime.format(
-    "hh:mm:ss:SSS"
-  )}<small>${cairoTime.format("A")}</small>`;
+    cairoDateElement.innerHTML = cairoTime.format("MMMM Do, YYYY");
+    cairoTimeElement.innerHTML = `${cairoTime.format(
+      "hh:mm:ss"
+    )}<small>${cairoTime.format("A")}</small>`;
+  }
+
+  let honoluluElement = document.querySelector("#honolulu");
+  if (honoluluElement) {
+    let honoluluDateElement = honoluluElement.querySelector(".date");
+    let honoluluTimeElement = honoluluElement.querySelector(".time");
+    let honoluluTime = moment().tz("Pacific/Honolulu");
+
+    honoluluDateElement.innerHTML = honoluluTime.format("MMMM Do, YYYY");
+    honoluluTimeElement.innerHTML = `${honoluluTime.format(
+      "hh:mm:ss"
+    )}<small>${honoluluTime.format("A")}</small>`;
+  }
 }
 
 function updateCity(event) {
@@ -38,16 +50,16 @@ function updateCity(event) {
             <h2>${cityName}</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
-          <div class="time">${cityTime.format(
-            "hh:mm:ss:SSS"
-          )}<small>${cityTime.format("A")} </small></div>
+          <div class="time">${cityTime.format("hh:mm")}<small>${cityTime.format(
+    "A"
+  )} </small></div>
         </div>
-        <a href ="/"> All Cities </a>
-        `;
+        <a href="/">All cities</a>
+       `;
 }
 
 updateTime();
-setInterval(updateTime, 1);
+setInterval(updateTime, 100);
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
