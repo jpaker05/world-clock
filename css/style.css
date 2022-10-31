@@ -1,6 +1,8 @@
 body {
-  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-  color: #222a25;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/929/original/nasa-Q1p7bh3SHj8-unsplash.jpg?1667226983");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #0c0f0d;
   font-family: sans-serif;
 }
 
@@ -20,16 +22,17 @@ select {
   padding: 10px;
   border-radius: 4px;
   font-size: 18px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .container {
-  background: #ececec;
+  background: rgba(255, 255, 255, 0.3);
   max-width: 600px;
   margin: 60px auto;
   padding: 30px;
-  box-shadow: rgba(100, 100, 111, 0.5) 0px 29px 7px 0px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 29px 7px 0px;
   border-radius: 10px;
-  border: 2px solid #222a25;
+  border: 2px solid #6c6f6d;
 }
 
 .city {
@@ -45,7 +48,8 @@ select {
 }
 
 .date {
-  opacity: 0.7;
+  color: #0c0f0d;
+  opacity: 0.9;
 }
 
 .time {
@@ -60,6 +64,16 @@ select {
 
 footer {
   text-align: center;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: 17px;
+  font-weight: 300;
+  color: #b4b8b6;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
